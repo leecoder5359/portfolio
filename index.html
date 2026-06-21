@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>이호준 · LEE HOJUN — Node.js · TypeScript Backend Developer</title>
-<meta name="description" content="연 거래액 1,350억, MAU 100만+ 캠핑 플랫폼 캠핏에서 예약·결제·정산·포인트 코어 도메인을 설계·운영한 Node.js / TypeScript 백엔드 개발자 이호준의 포트폴리오." />
+<meta name="description" content="연 거래액 1,350억, MAU 100만+ 캠핑 플랫폼 캠핏에서 결제·정산·포인트·쿠폰·검색 등 새로운 도메인을 빠르게 흡수해 설계로 옮겨 온 Node.js / TypeScript 백엔드 개발자 이호준의 포트폴리오." />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -461,8 +461,8 @@
     font-family: var(--mono); font-size: 11px; color: var(--text-faint);
     margin-left: 8px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
   }
-  .shot-body { position: relative; aspect-ratio: 9 / 16; }
-  .shot-body img { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; }
+  .shot-body { position: relative; background: #fff; min-height: 360px; }
+  .shot-body img { width: 100%; height: auto; display: block; }
   .shot-fallback {
     position: absolute; inset: 0;
     display: flex; flex-direction: column; align-items: center; justify-content: center;
@@ -473,7 +473,9 @@
   .shot-fallback .ico { font-size: 32px; }
   .shot-fallback .t { font-weight: 700; font-size: 16px; color: var(--text); }
   .shot-fallback .l { font-family: var(--mono); font-size: 12px; color: var(--accent); }
-  .shot-cap { padding: 12px 14px; font-size: 13px; color: var(--text-dim); border-top: 1px solid var(--hairline); }
+  .shot-cap { padding: 12px 14px; font-size: 13px; color: var(--text-dim); border-top: 1px solid var(--hairline); background: var(--panel); }
+  .shots-note { text-align: center; margin-top: 18px; font-size: 13px; color: var(--text-faint); }
+  .shots-note b { color: var(--accent); font-weight: 600; }
 
   /* project cards */
   .proj-feature {
@@ -717,11 +719,11 @@
       이호준<span class="grad">.</span>
       <span class="en">LEE HOJUN</span>
     </h1>
-    <p class="hero-role">예약<span class="sep">·</span>결제<span class="sep">·</span>정산<span class="sep">·</span>포인트 — 돈이 오가는 코어 도메인을 설계합니다</p>
+    <p class="hero-role">예약<span class="sep">·</span>결제<span class="sep">·</span>정산<span class="sep">·</span>포인트 — 처음 보는 도메인도 빠르게 꿰뚫어 설계로 끝을 봅니다</p>
     <p class="hero-desc">
       연 거래액 약 <strong>1,350억 원</strong>, MAU <strong>100만+</strong> 규모의 국내 1위 캠핑 플랫폼
-      <strong>캠핏</strong>에서 결제·정산·포인트 등 수익과 직결되는 코어 도메인을 NestJS / Strapi(Node.js)
-      기반으로 설계하고 운영하는 <strong>6년 차 백엔드 개발자</strong>입니다.
+      <strong>캠핏</strong>에서 결제·정산·포인트·쿠폰·검색까지, 매번 새로운 도메인을 빠르게 흡수해
+      NestJS / Strapi(Node.js) 설계로 옮겨 온 <strong>6년 차 백엔드 개발자</strong>입니다. 낯선 문제일수록 더 깊이 파고듭니다.
     </p>
 
     <div class="chips">
@@ -737,10 +739,6 @@
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .4.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
         GitHub
       </a>
-      <a class="btn" href="https://www.notion.so/LEE-HOJUN-Node-js-Backend-Developer-03492f59886a4b22923d28d9d49e7adf" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 3h11l5 5v13H4z"/><path d="M15 3v5h5"/></svg>
-        이력서 (Notion)
-      </a>
       <a class="btn" href="mailto:leecoder5359@gmail.com">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
         이메일
@@ -755,7 +753,7 @@
     <div class="reveal">
       <div class="section-mark">About</div>
       <h2 class="section-title">개발 철학</h2>
-      <p class="section-lead">기능을 만들기 전에 '왜'를 묻고, 돈과 데이터로 결과를 검증합니다. 5년 넘게 커머스와 플랫폼의 코어 도메인을 다루며 정리된 세 가지 원칙입니다.</p>
+      <p class="section-lead">기능을 만들기 전에 '왜'를 먼저 묻고, 처음 보는 도메인도 빠르게 익혀 곧장 설계로 옮깁니다. 5년 넘게 커머스·플랫폼의 온갖 도메인을 넘나들며 단련한 세 가지 원칙입니다.</p>
     </div>
     <div class="phil-grid">
       <div class="phil-card reveal">
@@ -764,9 +762,9 @@
         <p>기능 요청을 받으면 비즈니스 목적과 사용자 시나리오를 먼저 파악합니다. 그 위에서 최소한의 복잡도로 설계해, 만들지 않아도 될 것을 만들지 않습니다.</p>
       </div>
       <div class="phil-card reveal">
-        <div class="phil-num">02 / TRANSACTION</div>
-        <h3>돈이 오가는 도메인</h3>
-        <p>결제·정산·포인트처럼 정합성이 곧 신뢰인 도메인을 다룹니다. 트랜잭션 정합성과 멱등성을 기본 원칙으로, 보상 트랜잭션과 장애 격리를 우선 설계합니다.</p>
+        <div class="phil-num">02 / FAST-LEARNING</div>
+        <h3>빠르게 익히고, 바로 적용</h3>
+        <p>결제·정산·포인트·쿠폰·검색·광고까지 — 짧은 주기로 새 도메인에 뛰어들어 핵심을 빠르게 흡수하고, 곧바로 동작하는 설계와 코드로 옮겼습니다. 도메인이 바뀌어도 학습 속도가 무기가 됩니다.</p>
       </div>
       <div class="phil-card reveal">
         <div class="phil-num">03 / DATA-DRIVEN</div>
@@ -854,7 +852,7 @@
             <div class="tl-period">2024.01 ~ 현재</div>
           </div>
           <div class="tl-role">BackEnd Developer</div>
-          <p class="tl-summary">연 거래액 약 1,350억, MAU 100만+ 국내 1위 캠핑 플랫폼. 예약·결제·정산·포인트 등 수익 직결 코어 도메인 백엔드 전담.</p>
+          <p class="tl-summary">연 거래액 약 1,350억, MAU 100만+ 국내 1위 캠핑 플랫폼. 예약·결제·정산·포인트·쿠폰·검색 등 다양한 핵심 도메인을 빠르게 익혀 백엔드 전담.</p>
         </div>
       </div>
       <div class="tl-item reveal">
@@ -889,7 +887,7 @@
     <div class="reveal">
       <div class="section-mark">Featured Project</div>
       <h2 class="section-title">대표 프로젝트 — 캠핏 (Camfit)</h2>
-      <p class="section-lead">국내 1위 올인원 캠핑 플랫폼. 마케팅 없이 MAU 100만을 달성한 서비스에서 결제·정산·포인트 등 돈이 오가는 코어 도메인을 직접 설계하고 운영합니다.</p>
+      <p class="section-lead">마케팅 없이 MAU 100만을 만든 국내 1위 올인원 캠핑 플랫폼. 결제·정산·포인트·쿠폰·검색까지, 매번 새로운 도메인을 빠르게 흡수해 직접 설계하고 운영해 왔습니다.</p>
     </div>
 
     <div class="camfit-intro reveal">
@@ -912,12 +910,11 @@
       </div>
     </div>
 
-    <!-- screenshots -->
+    <!-- app screenshots (official App Store) -->
     <div class="shots">
       <div class="shot-frame reveal">
-        <div class="shot-bar"><div class="dots"><span></span><span></span><span></span></div><span class="url">camfit.co.kr</span></div>
         <div class="shot-body">
-          <img src="assets/camfit-home.png" alt="캠핏 홈 화면" loading="lazy"
+          <img src="assets/camfit-home.png" alt="캠핏 홈 화면 — 캠핑의 모든 것" loading="lazy"
                onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
           <div class="shot-fallback" style="display:none;">
             <div class="ico">⛺</div>
@@ -925,12 +922,11 @@
             <a class="l" href="https://camfit.co.kr/" target="_blank" rel="noopener">camfit.co.kr ↗</a>
           </div>
         </div>
-        <div class="shot-cap">실시간 캠핑장 예약 홈</div>
+        <div class="shot-cap">홈 · 캠핑의 모든 것</div>
       </div>
       <div class="shot-frame reveal">
-        <div class="shot-bar"><div class="dots"><span></span><span></span><span></span></div><span class="url">camfit.co.kr/search</span></div>
         <div class="shot-body">
-          <img src="assets/camfit-search.png" alt="캠핏 검색 화면" loading="lazy"
+          <img src="assets/camfit-search.png" alt="캠핏 실시간 예약·검색 화면" loading="lazy"
                onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
           <div class="shot-fallback" style="display:none;">
             <div class="ico">🔍</div>
@@ -938,22 +934,22 @@
             <a class="l" href="https://camfit.co.kr/" target="_blank" rel="noopener">camfit.co.kr ↗</a>
           </div>
         </div>
-        <div class="shot-cap">지도·좌표 기반 검색 개편</div>
+        <div class="shot-cap">실시간 예약 · 검색</div>
       </div>
       <div class="shot-frame reveal">
-        <div class="shot-bar"><div class="dots"><span></span><span></span><span></span></div><span class="url">apps.apple.com</span></div>
         <div class="shot-body">
-          <img src="assets/camfit-appstore.png" alt="캠핏 앱스토어 화면" loading="lazy"
+          <img src="assets/camfit-booking.png" alt="캠핏 빈자리 알림 화면" loading="lazy"
                onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
           <div class="shot-fallback" style="display:none;">
-            <div class="ico">📱</div>
-            <div class="t">캠핏 App</div>
+            <div class="ico">🔔</div>
+            <div class="t">빈자리 알림</div>
             <a class="l" href="https://apps.apple.com/kr/app/%EC%BA%A0%ED%95%8F-camfit/id1584553599" target="_blank" rel="noopener">App Store ↗</a>
           </div>
         </div>
-        <div class="shot-cap">iOS · 누적 설치 100만+</div>
+        <div class="shot-cap">빈자리 알림 · 예약</div>
       </div>
     </div>
+    <p class="shots-note">Google Play <b>50만+ 다운로드</b> · 평점 <b>4.6★</b> (리뷰 2.5만+) · 공식 App Store / Play 스토어 화면</p>
 
     <!-- feature project cards -->
     <h3 class="subhead reveal"><span class="bar"></span>핵심 프로젝트</h3>
@@ -1014,7 +1010,22 @@
         </div>
         <div class="metrics">
           <div class="metric"><span class="mk">1,000 → 2,800</span><span class="ml">일 평균 가입자 (약 3배)</span></div>
-          <div class="metric"><span class="mk">1만 → 17만</span><span class="ml">카카오 친구 수 (17배, CRM 채널 확대)</span></div>
+          <div class="metric"><span class="mk">1만 → 32만</span><span class="ml">카카오 친구 수 (32배, CRM 채널 확대)</span></div>
+        </div>
+      </div>
+
+      <div class="pcard reveal">
+        <div class="pcard-head">
+          <h3>쿠폰 시스템 — 외부 지원금 쿠폰 (숙박세일페스타)</h3>
+          <span class="period">2024.05~2025.05</span>
+        </div>
+        <p class="desc">전체/캠지기/호스트/<b>외부</b> 4종 쿠폰 타입 체계를 구축하고, <b>외부 지원금 쿠폰</b> 기능으로 국가·지자체 <b>숙박세일페스타</b>를 연동했습니다. 가평군 숙박세일페스타에는 캠핏이 공식 참여 플랫폼으로 선정되어, 지자체 지원 할인쿠폰의 발급·선착순 예산 소진 관리·정산 주체 분리를 처리했습니다. 연박 할인·환불 정책 정산 연동까지. 기여도 80%.</p>
+        <div class="ptags">
+          <span class="tag hot">TypeScript</span><span class="tag hot">NestJS</span><span class="tag">Strapi</span><span class="tag">MongoDB</span><span class="tag">외부 지원금 쿠폰</span>
+        </div>
+        <div class="metrics">
+          <div class="metric"><span class="mk">숙박세일페스타</span><span class="ml">국가·지자체 지원금 쿠폰 발급·정산 연동</span></div>
+          <div class="metric"><span class="mk">가평군 공식 참여</span><span class="ml">예약 플랫폼 6곳 중 하나로 선정 (언론 보도)</span></div>
         </div>
       </div>
     </div>
@@ -1039,12 +1050,6 @@
         <div class="period">2024.10~2024.11 · 기여도 70%</div>
         <p>광고 구좌·캘린더 슬롯 관리, 검색 파이프라인 내 광고 병합·중복 제거 로직.</p>
         <div class="mr">신규 광고 수익원 확보</div>
-      </div>
-      <div class="mini reveal">
-        <h4>쿠폰 시스템 고도화</h4>
-        <div class="period">2024.05~2025.05 · 기여도 80%</div>
-        <p>전체/캠지기/호스트/외부 쿠폰 타입별 발급·사용·정산 로직. 연박 할인·환불 정책 연동.</p>
-        <div class="mr">쿠폰 정산 자동화</div>
       </div>
       <div class="mini reveal">
         <h4>이미지 캐싱 (CloudFront)</h4>
@@ -1261,7 +1266,7 @@
   <div class="container reveal">
     <div class="section-mark" style="justify-content:center;">Contact</div>
     <h2>함께 일하고 싶습니다.</h2>
-    <p>돈이 오가는 코어 도메인을 정합성 있게 설계하는 백엔드 개발자를 찾고 계신가요? 편하게 연락 주세요.</p>
+    <p>새로운 도메인도 빠르게 파고들어 정합성 있게 설계하는 백엔드 개발자를 찾고 계신가요? 편하게 연락 주세요.</p>
     <div class="contact-links">
       <a class="btn primary" href="mailto:leecoder5359@gmail.com">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
@@ -1270,10 +1275,6 @@
       <a class="btn" href="https://github.com/leecoder5359" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .4.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
         github.com/leecoder5359
-      </a>
-      <a class="btn" href="https://www.notion.so/LEE-HOJUN-Node-js-Backend-Developer-03492f59886a4b22923d28d9d49e7adf" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 3h11l5 5v13H4z"/><path d="M15 3v5h5"/></svg>
-        Notion 이력서
       </a>
     </div>
   </div>
