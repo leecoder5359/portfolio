@@ -950,13 +950,13 @@
           <h3>캠핏 페이 &amp; 머니</h3>
           <span class="period">2025.12~2026.03</span>
         </div>
-        <p class="desc">단일 PG 의존을 복수 PG 분산 구조로 전환. 결제 게이트웨이 라우팅과 장애 시 자동 전환, 유저 그룹별 PG 분기를 구현하고, 선불 충전(하이머니 API 연동) 시스템 전체를 설계했습니다. 기여도 70%.</p>
+        <p class="desc">선불 충전 기반 <b>캠핏 머니</b> 시스템 전체를 설계. 자동·즉시 충전 플로우, 계좌 연동(하이머니 API), 충전·사용·환불 트랜잭션 관리와 결제 수단별 포인트 차등 적립을 구현했습니다. 기여도 70%.</p>
         <div class="ptags">
           <span class="tag hot">TypeScript</span><span class="tag hot">NestJS</span><span class="tag">Strapi</span><span class="tag">MongoDB</span><span class="tag">Redis</span><span class="tag">AWS SQS/S3</span>
         </div>
         <div class="metrics">
-          <div class="metric"><span class="mk">PG 다중화</span><span class="ml">단일 PG 장애 시에도 서비스 연속성 확보</span></div>
           <div class="metric"><span class="mk">머니 결제</span><span class="ml">추가 포인트 적립 구조로 리텐션 강화 기반 마련</span></div>
+          <div class="metric"><span class="mk">머니 대시보드</span><span class="ml">일별 스냅샷·트렌드 분석으로 실시간 모니터링</span></div>
         </div>
       </div>
 
@@ -977,16 +977,16 @@
 
       <div class="pcard reveal">
         <div class="pcard-head">
-          <h3>결제 모듈 교체 &amp; 재결제</h3>
-          <span class="period">2024.02~2024.04</span>
+          <h3>결제 모듈 진화 — 다날 → Toss → 멀티PG</h3>
+          <span class="period">2024.02 ~ 2026.03</span>
         </div>
-        <p class="desc">실패율이 높던 다날 → 토스로 결제 모듈을 전면 전환. 실패 원인별 분기 처리와 재결제 플로우를 설계하고, 교체 전후 3개월 데이터로 효과를 정량 검증했습니다. 기여도 90%.</p>
+        <p class="desc">결제 인프라를 3단계로 진화시켰습니다. ① 실패율 높던 <b>다날 → Toss</b> 전면 전환과 실패 원인별 재결제 플로우 설계, ② 이후 단일 PG 의존을 <b>복수 PG 분산(멀티PG)</b> 구조로 확장 — 게이트웨이 라우팅, 장애 시 자동 전환(failover), 유저 그룹별 PG 분기. 교체 전후 3개월 데이터로 효과를 정량 검증했습니다. 기여도 90%.</p>
         <div class="ptags">
-          <span class="tag hot">TypeScript</span><span class="tag">Strapi (Node.js)</span><span class="tag">MongoDB</span><span class="tag">Toss Payments</span>
+          <span class="tag hot">TypeScript</span><span class="tag hot">NestJS</span><span class="tag">Strapi</span><span class="tag">MongoDB</span><span class="tag">Toss Payments</span><span class="tag">Multi-PG</span>
         </div>
         <div class="metrics">
-          <div class="metric"><span class="mk">17.4% → 13.9%</span><span class="ml">결제 실패 예약 대기 비율 (약 20%↓)</span></div>
-          <div class="metric"><span class="mk">재결제 경로</span><span class="ml">제공으로 예약 이탈률 감소</span></div>
+          <div class="metric"><span class="mk">17.4% → 13.9%</span><span class="ml">Toss 전환 후 결제 실패 예약 대기 비율 (약 20%↓)</span></div>
+          <div class="metric"><span class="mk">멀티PG · Failover</span><span class="ml">단일 PG 장애 시에도 결제 연속성 확보</span></div>
         </div>
       </div>
 
