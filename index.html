@@ -670,6 +670,19 @@
     .reveal { opacity: 1; transform: none; transition: none; }
     .pulse { animation: none; }
   }
+
+  /* ---------- PRINT / PDF ---------- */
+  @media print {
+    html, body { background: var(--bg) !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+    nav { display: none !important; }
+    .pulse { animation: none !important; }
+    section { padding: 40px 0 !important; break-inside: avoid-page; }
+    #hero { padding-top: 48px !important; }
+    .shot-frame, .pcard, .phil-card, .news-card, .tl-item, .mini, .stack-group { break-inside: avoid; }
+    a { text-decoration: none !important; }
+  }
+  @page { margin: 14mm 0; }
 </style>
 </head>
 <body>
@@ -1290,6 +1303,22 @@
   })();
 
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // ---------- finalize for print / PDF (force all content + final numbers) ----------
+  function finalizeStatic() {
+    document.querySelectorAll('.reveal').forEach(function (el) {
+      el.classList.add('in'); el.style.opacity = '1'; el.style.transform = 'none';
+    });
+    document.querySelectorAll('[data-count]').forEach(function (el) {
+      var t = parseFloat(el.getAttribute('data-count'));
+      el.textContent = (el.getAttribute('data-prefix') || '') + t.toLocaleString('en-US') + (el.getAttribute('data-suffix') || '');
+    });
+  }
+  window.addEventListener('beforeprint', finalizeStatic);
+  if (window.matchMedia) {
+    var _mqp = window.matchMedia('print');
+    if (_mqp.addEventListener) _mqp.addEventListener('change', function (e) { if (e.matches) finalizeStatic(); });
+  }
 
   // ---------- reveal on scroll ----------
   (function () {
