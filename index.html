@@ -703,6 +703,7 @@
       <a href="#stack">기술</a>
       <a href="#career">경력</a>
       <a href="#camfit">캠핏</a>
+      <a href="#ai">AI</a>
       <a href="#ncode">N.CODE</a>
       <a href="#vtpl">VTPL</a>
       <a href="#side">사이드</a>
@@ -1123,6 +1124,78 @@
         <div class="nt">버티컬 캠핑 플랫폼 '캠핏', 앱 서비스 론칭</div>
         <span class="narrow">기사 보기 ↗</span>
       </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== AI-NATIVE ===================== -->
+<section id="ai">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-mark">AI-Native</div>
+      <h2 class="section-title">AI 에이전트 활용 제품 개발</h2>
+      <p class="section-lead">
+        2026년부터 <strong style="color:var(--accent)">Claude Code 기반 AI 에이전트</strong>와 함께
+        기획 → 개발 → 감사 → 운영 전 주기를 1인으로 수행하는 방식을 실험하고 정착시켰습니다.
+        '코드 생성 보조'를 넘어 <strong>서브에이전트 오케스트레이션 · 자동 전수 감사 · Slack 승인 루프</strong>를
+        개발 프로세스 자체로 만든 결과물 두 가지입니다.
+      </p>
+    </div>
+
+    <div class="proj-feature">
+      <div class="pcard reveal">
+        <div class="pcard-head">
+          <h3>로요 (LOYO) — 매장 고객·포인트·예약 SaaS</h3>
+          <span class="period">2026.06 ~ 운영 중</span>
+        </div>
+        <p class="desc">
+          미용실·네일샵 등 오프라인 매장을 위한 고객 관리(CRM)·포인트·예약 SaaS를 <b>혼자 만들어 상용 운영 중</b>입니다.
+          토스페이먼츠 구독 결제, dev/prod 스테이징 분리, 클라우드 크론 워커, PWA 웹푸시까지 —
+          팀이 하던 일의 전 영역을 AI 에이전트 오케스트레이션으로 커버합니다.
+        </p>
+        <ul class="pfeat">
+          <li><b>에이전트 다렌즈 전수 감사</b> — 기술·기획·UX 3개 렌즈 17차원으로 서비스 전체를 훑어 85건 발견, 보드 이슈로 자동 등록 후 순차 수정. 사람 QA 조직이 없는 1인 운영의 품질 게이트를 에이전트 반복 감사로 대체</li>
+          <li><b>도메인별 심층 감사 루프</b> — 결제 경로 전수 감사 27건 수정, 공개 anon 키로 실행 가능하던 DB RPC 권한 취약점 발견·잠금, KST 시간대 8축 감사 후 ESLint 가드·CI 로 재발 방지까지 연결</li>
+          <li><b>감사 → 이슈 → 수정 → 가드</b>의 폐루프를 반복 실행 — 발견사항은 채팅에 나열하지 않고 보드에 적재해 추적</li>
+        </ul>
+        <div class="ptags">
+          <span class="tag hot">Next.js</span><span class="tag hot">Supabase (PostgreSQL)</span><span class="tag">Toss Payments</span><span class="tag">PWA · Web Push</span><span class="tag hot">Claude Code</span>
+        </div>
+        <div class="metrics">
+          <div class="metric"><span class="mk">PR 130+</span><span class="ml">1인 개발로 누적 병합 (DB 마이그레이션 70+)</span></div>
+          <div class="metric"><span class="mk">가이드 26편</span><span class="ml">에이전트 집필 규칙 기반 SEO 콘텐츠 제작·배포</span></div>
+        </div>
+        <div class="prev-foot" style="margin-top:18px;">
+          <a class="olink" href="https://loyo.co.kr" target="_blank" rel="noopener">↗ loyo.co.kr</a>
+        </div>
+      </div>
+
+      <div class="pcard reveal">
+        <div class="pcard-head">
+          <h3>TeamSpace — 사람 + AI 에이전트 혼성 팀 워크스페이스</h3>
+          <span class="period">2026.06 ~ · OSS 공개</span>
+        </div>
+        <p class="desc">
+          AI 에이전트를 '도구'가 아니라 <b>팀원처럼 협업</b>시키기 위한 셀프호스팅 워크스페이스를 직접 설계·구현하고
+          오픈소스로 공개했습니다. 보드·문서·결정·승인을 단일 진실 원천으로 두고,
+          에이전트는 MCP 서버·CLI·훅 3계층으로 접근합니다.
+        </p>
+        <ul class="pfeat">
+          <li><b>Slack 승인 버튼 루프</b> — 방향을 가르는 결정은 에이전트가 승인/거부 버튼 카드를 발송하고 응답을 폴링해 진행. 사람은 자리를 지키지 않아도 통제권을 유지</li>
+          <li><b>세션 컨텍스트 자동 주입</b> — 팀 레슨·확정 결정·프로젝트 상태를 세션 시작 훅으로 에이전트에 주입. AI 활용을 개인 스킬이 아니라 <b>축적되는 팀 시스템</b>으로 전환</li>
+          <li><b>에이전트 운영 규범의 도구화</b> — 서브에이전트 구현 위임, 발견사항 보드 자동 등록, 문서 API 강제 훅 등 워크플로 규칙을 코드로 내장</li>
+        </ul>
+        <div class="ptags">
+          <span class="tag hot">Next.js</span><span class="tag hot">TypeScript</span><span class="tag">Prisma · PostgreSQL</span><span class="tag">MCP</span><span class="tag">Slack API</span><span class="tag hot">Claude Code</span>
+        </div>
+        <div class="metrics">
+          <div class="metric"><span class="mk">테스트 1,500+</span><span class="ml">CLI↔API 파리티 검증 포함 자동화 테스트</span></div>
+          <div class="metric"><span class="mk">MCP · CLI · 훅</span><span class="ml">에이전트 접근 3계층 동봉 (셀프호스팅)</span></div>
+        </div>
+        <div class="prev-foot" style="margin-top:18px;">
+          <a class="olink" href="https://github.com/leecoder5359/teamspace-oss" target="_blank" rel="noopener">↗ github.com/leecoder5359/teamspace-oss</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
