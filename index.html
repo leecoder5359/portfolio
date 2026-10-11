@@ -1138,11 +1138,60 @@
         2026년부터 <strong style="color:var(--accent)">Claude Code 기반 AI 에이전트</strong>와 함께
         기획 → 개발 → 감사 → 운영 전 주기를 1인으로 수행하는 방식을 실험하고 정착시켰습니다.
         '코드 생성 보조'를 넘어 <strong>서브에이전트 오케스트레이션 · 자동 전수 감사 · Slack 승인 루프</strong>를
-        개발 프로세스 자체로 만든 결과물 두 가지입니다.
+        개발 프로세스 자체로 만든 결과물 세 가지입니다.
       </p>
     </div>
 
     <div class="proj-feature">
+      <div class="pcard reveal" style="grid-column:1 / -1;">
+        <div class="pcard-head">
+          <h3>반장 — 인테리어 창업 준비 서비스</h3>
+          <span class="period">2026 · 외주 개발</span>
+        </div>
+        <p class="desc">
+          인테리어 창업자가 도면을 그리고, 3D로 확인하고, 자재 수량과 공정 일정을 뽑고,
+          서류와 현장검증까지 <b>한곳에서 준비하는 서비스</b>입니다.
+          웹, 관리자 콘솔, API, CLI를 설계하고 개발했습니다.
+        </p>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-bottom:10px;">
+          <div class="shot-frame">
+            <div class="shot-body" style="min-height:0;">
+              <img src="assets/banjang-plan-import-result.webp" alt="반장 AI 도면 가져오기 — 질문에 답한 뒤의 변환 결과 화면" width="1600" height="1000" loading="lazy" />
+            </div>
+            <div class="shot-cap">AI 도면 가져오기 · 답을 반영한 변환 결과</div>
+          </div>
+          <div class="shot-frame">
+            <div class="shot-body" style="min-height:0;">
+              <img src="assets/banjang-ai-assist.webp" alt="반장 AI 도우미 — 홀 가운데 4인 테이블을 요청하고 적용 전 미리보기를 보는 화면" width="1600" height="1000" loading="lazy" />
+            </div>
+            <div class="shot-cap">AI 도우미 · 말로 고치기, 적용 전 미리보기</div>
+          </div>
+          <div class="shot-frame">
+            <div class="shot-body" style="min-height:0;">
+              <img src="assets/banjang-3d.webp" alt="반장 3D 보기 — 도면에서 바로 만든 입체와 도면 정보 화면" width="1600" height="1000" loading="lazy" />
+            </div>
+            <div class="shot-cap">3D 보기 · 도면에서 바로 만든 3D</div>
+          </div>
+        </div>
+        <p class="shots-note" style="margin:0 0 18px;text-align:left;">화면은 모두 데모 데이터로 찍었습니다.</p>
+        <ul class="pfeat">
+          <li><b>AI 도면 가져오기</b> — PDF 도면을 올리면 벽과 방을 편집할 수 있는 도면으로 변환. 전부 맞히려 하지 않고 <b>확실하지 않은 곳만 질문</b>(출입구·개구부·방 이름·축척)하고, 답할 때마다 도면에 바로 반영</li>
+          <li><b>도면 편집기와 AI 도우미</b> — 방·벽·문·창·기둥·가구·조명을 그리면 치수와 면적을 자동 표시. AI 도우미는 바뀔 곳을 먼저 보여 주는 <b>제안만 하고, 적용과 저장은 사용자가</b> 결정</li>
+          <li><b>도면에서 바로 만드는 3D</b> — 저장한 도면이 바로 입체가 되고, 2D에서 고치면 3D도 함께 바뀜. 회전·확대·이동과 2D·3D 전환 지원</li>
+          <li><b>자재 산출·공정 일정·서류·현장검증까지 한 흐름</b> — 방별 면적에 할증과 포장 단위를 반영한 수량 산출, 조건을 고르면 자동으로 만들어지는 공정 일정, 업종·지역별 인허가 서류 판정, 전문가 현장검증 신청. 운영값은 관리자 콘솔에서 바꾸고 모든 변경은 감사 기록에 남김</li>
+        </ul>
+        <div class="ptags">
+          <span class="tag hot">Next.js</span><span class="tag hot">React</span><span class="tag hot">TypeScript</span><span class="tag">도면 편집기</span><span class="tag">3D 뷰어</span><span class="tag">PDF 변환</span><span class="tag">관리자 콘솔</span><span class="tag">CLI</span>
+        </div>
+        <div class="metrics">
+          <div class="metric"><span class="mk">8단계 흐름</span><span class="ml">프로젝트 만들기부터 도면·3D·자재·일정·서류·현장검증까지 한 프로젝트로 연결</span></div>
+          <div class="metric"><span class="mk">웹·관리자·API·CLI</span><span class="ml">회원·전문가·관리자가 쓰는 MVP 웹 서비스 (모바일 브라우저 지원)</span></div>
+        </div>
+        <div class="prev-foot" style="margin-top:18px;">
+          <a class="olink" href="https://leecoder-factory.co.kr/work/banjang/" target="_blank" rel="noopener">↗ leecoder-factory.co.kr/work/banjang</a>
+        </div>
+      </div>
+
       <div class="pcard reveal">
         <div class="pcard-head">
           <h3>로요 (LOYO) — 매장 고객·포인트·예약 SaaS</h3>
@@ -1177,23 +1226,25 @@
         </div>
         <p class="desc">
           AI 에이전트를 '도구'가 아니라 <b>팀원처럼 협업</b>시키기 위한 셀프호스팅 워크스페이스를 직접 설계·구현하고
-          오픈소스로 공개했습니다. 보드·문서·결정·승인을 단일 진실 원천으로 두고,
-          에이전트는 MCP 서버·CLI·훅 3계층으로 접근합니다.
+          오픈소스(MIT)로 공개했습니다. 보드·문서·결정·승인을 단일 진실 원천으로 두고,
+          에이전트는 MCP 서버(도구 23개)·CLI·훅 3계층으로 접근합니다.
         </p>
         <ul class="pfeat">
-          <li><b>Slack 승인 버튼 루프</b> — 방향을 가르는 결정은 에이전트가 승인/거부 버튼 카드를 발송하고 응답을 폴링해 진행. 사람은 자리를 지키지 않아도 통제권을 유지</li>
-          <li><b>세션 컨텍스트 자동 주입</b> — 팀 레슨·확정 결정·프로젝트 상태를 세션 시작 훅으로 에이전트에 주입. AI 활용을 개인 스킬이 아니라 <b>축적되는 팀 시스템</b>으로 전환</li>
-          <li><b>에이전트 운영 규범의 도구화</b> — 서브에이전트 구현 위임, 발견사항 보드 자동 등록, 문서 API 강제 훅 등 워크플로 규칙을 코드로 내장</li>
+          <li><b>Slack 승인 루프</b> — 방향을 가르는 결정은 에이전트가 승인/거부 버튼 카드를 발송하고 응답을 확인한 뒤 진행. 사람은 자리를 지키지 않아도 통제권을 유지</li>
+          <li><b>세션·메시지 기반 레슨 주입</b> — 팀 레슨·확정 결정·프로젝트 상태를 세션 시작 훅으로 넣고, 사용자 메시지의 키워드·프로젝트 별칭에 맞는 레슨을 추가로 주입. AI 활용을 개인 스킬이 아니라 <b>축적되는 팀 시스템</b>으로 전환</li>
+          <li><b>문서와 지식</b> — 위키링크·백링크와 지식 그래프로 문서를 잇고, HTML 퍼블리시로 초대한 사람만 보는 페이지를 공유</li>
+          <li><b>운영 도구 내장</b> — 암호화 보관하는 env 금고, 라이브 세션과 푸시·배포가 겹치지 않게 하는 이름 있는 잠금, 백업과 복원 리허설</li>
         </ul>
         <div class="ptags">
           <span class="tag hot">Next.js</span><span class="tag hot">TypeScript</span><span class="tag">Prisma · PostgreSQL</span><span class="tag">MCP</span><span class="tag">Slack API</span><span class="tag hot">Claude Code</span>
         </div>
         <div class="metrics">
           <div class="metric"><span class="mk">테스트 1,500+</span><span class="ml">CLI↔API 파리티 검증 포함 자동화 테스트</span></div>
-          <div class="metric"><span class="mk">MCP · CLI · 훅</span><span class="ml">에이전트 접근 3계층 동봉 (셀프호스팅)</span></div>
+          <div class="metric"><span class="mk">MCP 도구 23개</span><span class="ml">태스크·문서·레슨·결정·제안·검색·퍼블리시를 에이전트가 직접 조작</span></div>
         </div>
         <div class="prev-foot" style="margin-top:18px;">
           <a class="olink" href="https://github.com/leecoder5359/teamspace-oss" target="_blank" rel="noopener">↗ github.com/leecoder5359/teamspace-oss</a>
+          <a class="olink" href="https://leecoder-factory.co.kr/work/teamspace/" target="_blank" rel="noopener">↗ leecoder-factory.co.kr/work/teamspace</a>
         </div>
       </div>
     </div>
@@ -1358,6 +1409,10 @@
       <a class="btn" href="https://github.com/leecoder5359" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .4.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
         github.com/leecoder5359
+      </a>
+      <a class="btn" href="https://leecoder-factory.co.kr" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
+        리코더 팩토리
       </a>
     </div>
   </div>
